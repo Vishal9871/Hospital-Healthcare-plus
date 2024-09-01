@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Plus - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>        
+        <div class="logo">
+          <a href="index.html">  <img src="health.jpg" alt="HealthCare Plus Logo"></a>
+            <h1>HealthCare Plus</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="specializations.html">Specializations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to HealthCare Plus</h2>
+            <p>Your Path to Wellness Starts Here</p>
+        </section>
+
+        <section id="services" class="reveal">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Primary Care</h3>
+                    <p>Comprehensive health services for all ages.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Cardiology</h3>
+                    <p>Expert care for heart-related conditions.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Neurology</h3>
+                    <p>Advanced treatments for neurological disorders.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-bone"></i>
+                    <h3>Orthopedics</h3>
+                    <p>Specialized care for bones, joints, and muscles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="reveal">
+            <h2>Why Choose HealthCare Plus</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Expert Physicians</h3>
+                    <p>Our team of board-certified doctors brings years of experience to every patient.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hospital"></i>
+                    <h3>State-of-the-Art Facilities</h3>
+                    <p>Equipped with the latest medical technology for the best possible care.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Emergency Care</h3>
+                    <p>Round-the-clock emergency services for your peace of mind.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-smile"></i>
+                    <h3>Patient-Centered Approach</h3>
+                    <p>We prioritize your comfort and well-being throughout your healthcare journey.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="reveal">
+            <h2>What Our Patients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    <p>"The care I received at HealthCare Plus was exceptional. The staff was attentive and professional."</p>
+                    <span class="testimonial-author">- Nithish K.</span>
+                </div>
+                <div class="testimonial-item">
+                    <p>"I'm grateful for the compassionate care provided by the entire team. They made a difficult time much easier."</p>
+                    <span class="testimonial-author">- Shreya S.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Gandhi Nagar, Medical College Road Chennai</p>
+                <p>Phone: 123456789</p>
+                <p>Email: info@healthcareplus.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 HealthCare Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+            
+            for(var i = 0; i < reveals.length; i++){
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+                
+                if(revealTop < windowHeight - revealPoint){
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
